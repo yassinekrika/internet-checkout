@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #e3f2fd;
+}
+
+.popup {
+    position: absolute;
+    left: 50%;
+    top: -25%;
+    visibility: hidden;
+    width: 490px;
+    border-radius: 5px;
+    padding: 13px 17px 20px;
+    background: #fff;
+    display: flex;
+    border-top: 3px solid #ea4d67;
+    box-shadow: 0 10px 25px rgba(52, 87, 220, 0.1);
+    transform: translateX(-50%);
+    transition: all 0.25s ease;
+}
+
+.show {
+    top: 0;
+    visibility: visible;
+}
+
+.popup .icon i {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    font-size: 1.2rem;
+    margin-right: 15px;
+    color: #fff;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: #ea4d67;
+}
+
+.online .icon i {
+    background-color: #2ecc71;
+}
+
+.popup .desc {
+    color: #474747;
+    margin: 3px 0 10px;
+    font-size: 1.0.4rem;
+}
+
+.popup .reconnect {
+    border: none;
+    outline: none;
+    color: #fff;
+    font-size: 0.95rem;
+    font-weight: 500;
+    cursor: pointer;
+    border-radius: 4px;
+    padding: 9px 15px;
+    background: #5372f0;
+}
+
+.popup.online .reconnect {
+    background: #bfbfbf;
+    pointer-events: none;
+}
